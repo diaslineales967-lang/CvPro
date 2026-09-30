@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu CV Profesional con IA | Rápido y Automático</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans">
+
+    <!-- Header -->
+    <header class="bg-slate-800 border-b border-slate-700 py-4 px-6 flex justify-between items-center shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-indigo-600 p-2 rounded-xl text-white font-bold text-lg">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-lg tracking-wide text-white">CV Express <span class="text-indigo-400">IA</span></h1>
+                <p class="text-xs text-slate-400">Optimizado para Computrabajo y Bumeran</p>
+            </div>
+        </div>
+        <div class="text-right">
+            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs px-3 py-1 rounded-full font-semibold">
+                Precio Único: S/ 4.50
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
+
+        <!-- Steps Indicator -->
+        <div class="flex justify-center mb-8">
+            <div class="flex items-center space-x-4 text-sm">
+                <div id="step1-indicator" class="flex items-center space-x-2 text-indigo-400 font-bold">
+                    <span class="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center">1</span>
+                    <span>Elige Modelo</span>
+                </div>
+                <div class="w-8 h-0.5 bg-slate-700"></div>
+                <div id="step2-indicator" class="flex items-center space-x-2 text-slate-400">
+                    <span class="w-7 h-7 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center">2</span>
+                    <span>Tus Datos</span>
+                </div>
+                <div class="w-8 h-0.5 bg-slate-700"></div>
+                <div id="step3-indicator" class="flex items-center space-x-2 text-slate-400">
+                    <span class="w-7 h-7 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center">3</span>
+                    <span>Pago & IA</span>
+                </div>
+                <div class="w-8 h-0.5 bg-slate-700"></div>
+                <div id="step4-indicator" class="flex items-center space-x-2 text-slate-400">
+                    <span class="w-7 h-7 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center">4</span>
+                    <span>Descarga</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 1: SELECT TEMPLATE -->
+        <section id="step1-view" class="space-y-6">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-white mb-2">Elige el diseño de tu Currículum</h2>
+                <p class="text-slate-400 text-sm">Plantillas profesionales diseñadas para pasar filtros ATS (Computrabajo y Bumeran).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Template 1 -->
+                <div onclick="selectTemplate('modern')" id="tmpl-modern" class="cursor-pointer bg-slate-800 border-2 border-indigo-600 rounded-2xl p-5 hover:border-indigo-400 transition shadow-lg relative group">
+                    <div class="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-2 py-1 rounded-md font-bold">Seleccionado</div>
+                    <div class="h-36 bg-slate-900 rounded-lg mb-4 p-3 border border-slate-700 flex flex-col justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 bg-indigo-500 rounded-full"></div>
+                            <div>
+                                <div class="w-20 h-2 bg-white rounded"></div>
+                                <div class="w-12 h-1.5 bg-slate-400 rounded mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full h-1 bg-slate-700 rounded"></div>
+                            <div class="w-4/5 h-1 bg-slate-700 rounded"></div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Moderno Ejecutivo</h3>
+                    <p class="text-xs text-slate-400 mt-1">Limpio, con barra lateral y enfocado en experiencia corporativa y atención al cliente.</p>
+                </div>
+
+                <!-- Template 2 -->
+                <div onclick="selectTemplate('minimal')" id="tmpl-minimal" class="cursor-pointer bg-slate-800 border-2 border-slate-700 rounded-2xl p-5 hover:border-indigo-400 transition shadow-lg relative group">
+                    <div class="h-36 bg-slate-900 rounded-lg mb-4 p-3 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <div class="w-24 h-2.5 bg-white rounded mb-1"></div>
+                            <div class="w-16 h-1.5 bg-slate-400 rounded"></div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <div class="w-full h-1 bg-slate-700 rounded"></div>
+                            <div class="w-full h-1 bg-slate-700 rounded"></div>
+                            <div class="w-3/4 h-1 bg-slate-700 rounded"></div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Minimalista ATS</h3>
+                    <p class="text-xs text-slate-400 mt-1">Ideal para lectura rápida de reclutadores y sistemas automáticos de selección.</p>
+                </div>
+
+                <!-- Template 3 -->
+                <div onclick="selectTemplate('creative')" id="tmpl-creative" class="cursor-pointer bg-slate-800 border-2 border-slate-700 rounded-2xl p-5 hover:border-indigo-400 transition shadow-lg relative group">
+                    <div class="h-36 bg-slate-900 rounded-lg mb-4 p-3 border border-slate-700 flex flex-col justify-between">
+                        <div class="border-b border-indigo-500 pb-2">
+                            <div class="w-20 h-2 bg-indigo-400 rounded"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="h-8 bg-slate-800 rounded"></div>
+                            <div class="h-8 bg-slate-800 rounded"></div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Impacto Comercial</h3>
+                    <p class="text-xs text-slate-400 mt-1">Destaca habilidades de ventas, llamadas, logística y atención telefónica.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-end pt-4">
+                <button onclick="goToStep(2)" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition flex items-center space-x-2">
+                    <span>Continuar con Datos</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- STEP 2: USER DATA FORM -->
+        <section id="step2-view" class="hidden space-y-6">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-white mb-2">Ingresa tu información profesional</h2>
+                <p class="text-slate-400 text-sm">Nuestra IA se encargará de redactar y mejorar las descripciones automáticamente.</p>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ej. Juan Moisés Espinoza" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Puesto al que postulas</label>
+                        <input type="text" id="puesto" placeholder="Ej. Asesor de Call Center / Atención al Cliente" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Teléfono / WhatsApp</label>
+                        <input type="text" id="telefono" placeholder="Ej. +51 987 654 321" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="Ej. juan.espinoza@gmail.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Resumen de Experiencia Previa</label>
+                    <textarea id="experiencia" rows="3" placeholder="Menciona brevemente tus últimos trabajos (Ej: Atendí llamadas en Konecta, soporte técnico, manejo de CRM...)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Educación y Estudios</label>
+                    <input type="text" id="educacion" placeholder="Ej. Instituto SENATI / Cibertec - Administración" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                </div>
+            </div>
+
+            <div class="flex justify-between pt-4">
+                <button onclick="goToStep(1)" class="bg-slate-700 hover:bg-slate-600 text-white font-bold px-6 py-3 rounded-xl transition">
+                    Atrás
+                </button>
+                <button onclick="goToStep(3)" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition flex items-center space-x-2">
+                    <span>Ir a Pago y Optimizar con IA</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- STEP 3: PAYMENT & AI PROCESSING -->
+        <section id="step3-view" class="hidden space-y-6">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-white mb-2">Realiza tu pago seguro (S/ 4.50)</h2>
+                <p class="text-slate-400 text-sm">Elige tu método de pago favorito y haz clic en verificar para activar la IA.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Payment Methods -->
+                <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl space-y-4">
+                    <h3 class="font-bold text-white text-sm uppercase tracking-wider text-indigo-400">Métodos de Pago Peruanos</h3>
+                    
+                    <div class="grid grid-cols-3 gap-3">
+                        <button onclick="selectPayment('yape')" id="pay-yape" class="pay-btn border-2 border-indigo-600 bg-slate-900/50 p-4 rounded-xl text-center font-bold text-white transition flex flex-col items-center justify-center space-y-1">
+                            <i class="fa-solid fa-mobile-screen-button text-purple-400 text-xl"></i>
+                            <span class="text-xs">Yape</span>
+                        </button>
+                        <button onclick="selectPayment('plin')" id="pay-plin" class="pay-btn border-2 border-slate-700 bg-slate-900/50 p-4 rounded-xl text-center font-bold text-white transition flex flex-col items-center justify-center space-y-1">
+                            <i class="fa-solid fa-wallet text-sky-400 text-xl"></i>
+                            <span class="text-xs">Plin</span>
+                        </button>
+                        <button onclick="selectPayment('card')" id="pay-card" class="pay-btn border-2 border-slate-700 bg-slate-900/50 p-4 rounded-xl text-center font-bold text-white transition flex flex-col items-center justify-center space-y-1">
+                            <i class="fa-solid fa-credit-card text-emerald-400 text-xl"></i>
+                            <span class="text-xs">Tarjeta</span>
+                        </button>
+                    </div>
+
+                    <div id="payment-qr-box" class="bg-slate-900 border border-slate-700 rounded-xl p-4 text-center space-y-2">
+                        <p class="text-xs text-slate-400">Escanea con <span id="payment-name-text" class="text-purple-400 font-bold">Yape</span> o transfiere al número:</p>
+                        <div class="text-lg font-mono font-bold text-white bg-slate-800 py-2 rounded-lg border border-slate-700">987 654 321</div>
+                        <p class="text-[11px] text-slate-500">Titular: Juan Espinoza | Monto: S/ 4.50</p>
+                    </div>
+                </div>
+
+                <!-- AI Simulation Box -->
+                <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-white text-sm uppercase tracking-wider text-indigo-400 mb-2">Proceso Inteligente IA</h3>
+                        <p class="text-xs text-slate-400 mb-4">Nuestra IA reestructurará tu perfil para resaltar palabras clave automáticas en Computrabajo y Bumeran.</p>
+                        
+                        <div id="ai-status" class="hidden space-y-3 bg-slate-900 p-4 rounded-xl border border-slate-700">
+                            <div class="flex items-center space-x-3 text-xs text-indigo-300">
+                                <i class="fa-solid fa-spinner fa-spin text-indigo-400"></i>
+                                <span id="ai-log-text">Analizando perfil con motor IA...</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div id="ai-progress-bar" class="bg-indigo-500 h-full w-0 transition-all duration-300"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="processPaymentAndAI()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-shield-check"></i>
+                            <span>Ya pagué S/ 4.50 y Generar CV con IA</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between pt-4">
+                <button onclick="goToStep(2)" class="bg-slate-700 hover:bg-slate-600 text-white font-bold px-6 py-3 rounded-xl transition">
+                    Atrás
+                </button>
+            </div>
+        </section>
+
+        <!-- STEP 4: DOWNLOAD -->
+        <section id="step4-view" class="hidden space-y-6 text-center">
+            <div class="max-w-md mx-auto bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl space-y-6">
+                <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center justify-center mx-auto text-3xl">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2">¡Tu CV está listo!</h2>
+                    <p class="text-slate-400 text-sm">La IA ha optimizado exitosamente tu perfil para filtros de empleo.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-700 p-4 rounded-xl text-left space-y-2 text-xs">
+                    <div class="flex justify-between text-slate-400">
+                        <span>Plantilla:</span>
+                        <span id="res-template" class="text-white font-semibold">Moderno Ejecutivo</span>
+                    </div>
+                    <div class="flex justify-between text-slate-400">
+                        <span>Puesto:</span>
+                        <span id="res-puesto" class="text-white font-semibold">-</span>
+                    </div>
+                    <div class="flex justify-between text-slate-400">
+                        <span>Estado IA:</span>
+                        <span class="text-emerald-400 font-semibold">Optimizado (ATS 98%)</span>
+                    </div>
+                </div>
+
+                <button onclick="downloadPDF()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl shadow-lg transition flex items-center justify-center space-x-2 text-base">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Descargar Currículum en PDF</span>
+                </button>
+
+                <p class="text-[11px] text-slate-500">¿Necesitas ayuda adicional? Escríbenos por WhatsApp directamente.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 py-4 text-center text-xs text-slate-400">
+        &copy; 2026 CV Express IA - Todos los derechos reservados.
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        let currentTemplate = 'modern';
+        let currentPayment = 'yape';
+        let userData = {};
+
+        function selectTemplate(tmpl) {
+            currentTemplate = tmpl;
+            document.querySelectorAll('[id^="tmpl-"]').forEach(el => {
+                el.classList.remove('border-indigo-600');
+                el.classList.add('border-slate-700');
+                const badge = el.querySelector('.absolute');
+                if(badge) badge.remove();
+            });
+
+            const selected = document.getElementById('tmpl-' + tmpl);
+            selected.classList.remove('border-slate-700');
+            selected.classList.add('border-indigo-600');
+            selected.insertAdjacentHTML('beforeend', '<div class="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-2 py-1 rounded-md font-bold">Seleccionado</div>');
+        }
+
+        function selectPayment(method) {
+            currentPayment = method;
+            document.querySelectorAll('.pay-btn').forEach(btn => {
+                btn.classList.remove('border-indigo-600');
+                btn.classList.add('border-slate-700');
+            });
+            document.getElementById('pay-' + method).classList.remove('border-slate-700');
+            document.getElementById('pay-' + method).classList.add('border-indigo-600');
+
+            const names = { yape: 'Yape', plin: 'Plin', card: 'Tarjeta' };
+            document.getElementById('payment-name-text').innerText = names[method];
+        }
+
+        function goToStep(step) {
+            if (step === 2) {
+                userData.nombre = document.getElementById('nombre').value.trim();
+                userData.puesto = document.getElementById('puesto').value.trim();
+                if(!userData.nombre || !userData.puesto) {
+                    alert('Por favor ingresa al menos tu nombre y puesto deseado.');
+                    return;
+                }
+            }
+
+            document.querySelectorAll('main > section').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById('step' + step + '-view').classList.remove('hidden');
+
+            // Update indicators
+            for(let i=1; i<=4; i++) {
+                const ind = document.getElementById('step' + i + '-indicator');
+                const circle = ind.querySelector('span:first-child');
+                if(i <= step) {
+                    ind.classList.remove('text-slate-400');
+                    ind.classList.add('text-indigo-400', 'font-bold');
+                    circle.classList.remove('bg-slate-700', 'text-slate-300');
+                    circle.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    ind.classList.remove('text-indigo-400', 'font-bold');
+                    ind.classList.add('text-slate-400');
+                    circle.classList.remove('bg-indigo-600', 'text-white');
+                    circle.classList.add('bg-slate-700', 'text-slate-300');
+                }
+            }
+
+            if(step === 4) {
+                document.getElementById('res-puesto').innerText = userData.puesto;
+                const tmplNames = { modern: 'Moderno Ejecutivo', minimal: 'Minimalista ATS', creative: 'Impacto Comercial' };
+                document.getElementById('res-template').innerText = tmplNames[currentTemplate];
+            }
+        }
+
+        function processPaymentAndAI() {
+            const statusBox = document.getElementById('ai-status');
+            const logText = document.getElementById('ai-log-text');
+            const progressBar = document.getElementById('ai-progress-bar');
+            statusBox.classList.remove('hidden');
+
+            userData.telefono = document.getElementById('telefono').value;
+            userData.email = document.getElementById('email').value;
+            userData.experiencia = document.getElementById('experiencia').value;
+            userData.educacion = document.getElementById('educacion').value;
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 25;
+                progressBar.style.width = progress + '%';
+                if(progress === 25) logText.innerText = 'Verificando transacción vía ' + currentPayment.toUpperCase() + '...';
+                if(progress === 50) logText.innerText = 'Aplicando filtros ATS para Computrabajo...';
+                if(progress === 75) logText.innerText = 'Redactando perfil profesional con IA...';
+                if(progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        goToStep(4);
+                    }, 500);
+                }
+            }, 600);
+        }
+
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Header background
+            doc.setFillColor(30, 41, 59);
+            doc.rect(0, 0, 210, 40, 'F');
+
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(20);
+            doc.text(userData.nombre || 'Juan Espinoza', 20, 20);
+
+            doc.setFontSize(12);
+            doc.setTextColor(199, 210, 254);
+            doc.text(userData.puesto || 'Asesor Profesional', 20, 30);
+
+            // Contact info
+            doc.setTextColor(100, 100, 100);
+            doc.setFontSize(10);
+            doc.text(`Tel: ${userData.telefono || '987654321'} | Email: ${userData.email || 'correo@ejemplo.com'}`, 20, 50);
+
+            // Experience section
+            doc.setFontSize(14);
+            doc.setTextColor(30, 41, 59);
+            doc.text('PERFIL Y EXPERIENCIA PROFESIONAL (Optimizado por IA)', 20, 65);
+
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            const expText = userData.experiencia || 'Experiencia destacada en atención al cliente, resolución de incidencias y soporte digital.';
+            const splitExp = doc.splitTextToSize(expText, 170);
+            doc.text(splitExp, 20, 75);
+
+            // Education section
+            doc.setFontSize(14);
+            doc.setTextColor(30, 41, 59);
+            doc.text('EDUCACIÓN', 20, 110);
+
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            doc.text(userData.educacion || 'Formación técnica superior.', 20, 120);
+
+            // Footer note
+            doc.setFontSize(8);
+            doc.setTextColor(150, 150, 150);
+            doc.text('Generado automáticamente por CV Express IA - Listo para Computrabajo y Bumeran', 20, 280);
+
+            doc.save('CV_' + (userData.nombre ? userData.nombre.replace(/\s+/g, '_') : 'Profesional') + '.pdf');
+        }
+    </script>
+</body>
+</html>
