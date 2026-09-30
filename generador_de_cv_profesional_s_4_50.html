@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu CV Profesional a S/ 4.50 | Computrabajo y Bumeran</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: '#1e3a8a',
+                        yapePurple: '#7b1fa2',
+                        plinBlue: '#0288d1',
+                        accentGreen: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .yape-gradient { background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%); }
+        .plin-gradient { background: linear-gradient(135deg, #0288d1 0%, #01579b 100%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-yapePurple selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl yape-gradient flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold bg-gradient-to-r from-yapePurple to-plinBlue bg-clip-text text-transparent">CVPro IA</span>
+                    <span class="text-xs block text-slate-500 font-medium">Computrabajo & Bumeran</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#beneficios" class="hover:text-yapePurple transition">Beneficios</a>
+                <a href="#plantillas" class="hover:text-yapePurple transition">Modelos</a>
+                <a href="#pasos" class="hover:text-yapePurple transition">¿Cómo funciona?</a>
+            </nav>
+            <div>
+                <button onclick="scrollToApp()" class="px-4 py-2 text-sm font-semibold text-white yape-gradient rounded-xl shadow-md hover:opacity-95 transition transform active:scale-95">
+                    Crear mi CV por S/ 4.50
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-slate-900 via-slate-800 to-corporate text-white">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yapePurple/30 border border-yapePurple/50 text-purple-200 text-xs font-semibold mb-6">
+                <i class="fa-solid fa-bolt text-amber-400"></i> Optimizado con Inteligencia Artificial para Filtros ATS
+            </div>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
+                ¿Cansado de enviar tu CV y que <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">nadie te llame</span>?
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-normal">
+                No pierdas más oportunidades en <strong class="text-white">Computrabajo</strong> y <strong class="text-white">Bumeran</strong>. Rediseñamos y optimizamos tu currículum al instante por solo <span class="text-emerald-400 font-bold">S/ 4.50</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button onclick="scrollToApp()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-lg">
+                    <i class="fa-solid fa-wand-magic-sparkles"><span>Crear mi CV Ahora (S/ 4.50)</span></i>
+                </button>
+                <div class="flex items-center gap-3 text-xs text-slate-300 bg-white/10 px-4 py-3 rounded-xl backdrop-blur">
+                    <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i>
+                    <span>Pago seguro con Yape, Plin o Tarjeta<br>Descarga inmediata en PDF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">¿Por qué nuestro CV sí consigue entrevistas?</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Los reclutadores de Computrabajo y Bumeran leen un CV en menos de 6 segundos. El nuestro está diseñado para destacar.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-yapePurple flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Redacción por IA</h3>
+                    <p class="text-sm text-slate-600">Nuestra IA transforma tus experiencias simples en logros profesionales atractivos y de alto impacto.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-plinBlue flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-filter-circle-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Formato Anti-Filtros ATS</h3>
+                    <p class="text-sm text-slate-600">Estructuras limpias y palabras clave exactas para pasar los filtros automáticos de las principales bolsas de empleo en Perú.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Entrega Inmediata</h3>
+                    <p class="text-sm text-slate-600">Completa tus datos, paga mediante Yape/Plin/Tarjeta y descarga tu CV en PDF listo para postular en segundos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="app-container" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Step Indicator -->
+        <div class="mb-10">
+            <div class="flex items-center justify-between max-w-2xl mx-auto mb-4">
+                <div id="step-indicator-1" class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-yapePurple text-white flex items-center justify-center font-bold text-sm shadow-md transition">1</div>
+                    <span class="text-xs font-semibold mt-1 text-yapePurple">Modelo</span>
+                </div>
+                <div class="flex-1 h-1 bg-slate-200 mx-2 rounded">
+                    <div id="progress-bar-1" class="h-full bg-yapePurple w-0 transition-all duration-300"></div>
+                </div>
+                <div id="step-indicator-2" class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm shadow-sm transition">2</div>
+                    <span class="text-xs font-medium mt-1 text-slate-500">Tus Datos</span>
+                </div>
+                <div class="flex-1 h-1 bg-slate-200 mx-2 rounded">
+                    <div id="progress-bar-2" class="h-full bg-slate-200 w-0 transition-all duration-300"></div>
+                </div>
+                <div id="step-indicator-3" class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm shadow-sm transition">3</div>
+                    <span class="text-xs font-medium mt-1 text-slate-500">IA & Pago</span>
+                </div>
+                <div class="flex-1 h-1 bg-slate-200 mx-2 rounded">
+                    <div id="progress-bar-3" class="h-full bg-slate-200 w-0 transition-all duration-300"></div>
+                </div>
+                <div id="step-indicator-4" class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm shadow-sm transition">4</div>
+                    <span class="text-xs font-medium mt-1 text-slate-500">Descarga</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 1: TEMPLATE SELECTION -->
+        <div id="stage-1" class="space-y-8">
+            <div class="text-center">
+                <span class="text-xs font-bold uppercase tracking-wider text-yapePurple bg-purple-100 px-3 py-1 rounded-full">Paso 1 de 4</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Elige tu Modelo de CV Profesional</h2>
+                <p class="text-slate-600 text-sm mt-1">Selecciona el diseño que mejor se adapte al puesto de trabajo que buscas.</p>
+            </div>
+
+            <div id="plantillas" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Template 1: Ejecutivo -->
+                <div onclick="selectTemplate('ejecutivo')" id="tpl-ejecutivo" class="template-card cursor-pointer bg-white rounded-2xl border-2 border-yapePurple p-5 shadow-md relative overflow-hidden transition transform hover:-translate-y-1">
+                    <div class="absolute top-3 right-3 bg-yapePurple text-white text-xs px-2.5 py-1 rounded-full font-bold select-badge">Seleccionado</div>
+                    <div class="h-40 rounded-xl bg-slate-900 text-white p-4 flex flex-col justify-between mb-4 shadow-inner">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-purple-400"></div>
+                            <div>
+                                <div class="w-24 h-2.5 bg-white rounded"></div>
+                                <div class="w-16 h-2 bg-slate-400 rounded mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full h-1.5 bg-slate-700 rounded"></div>
+                            <div class="w-3/4 h-1.5 bg-slate-700 rounded"></div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Modelo Ejecutivo</h3>
+                    <p class="text-xs text-slate-500 mt-1">Ideal para gerencias, administración, banca y puestos corporativos formales.</p>
+                </div>
+
+                <!-- Template 2: Moderno ATS -->
+                <div onclick="selectTemplate('moderno')" id="tpl-moderno" class="template-card cursor-pointer bg-white rounded-2xl border-2 border-slate-200 p-5 shadow-sm hover:border-slate-300 relative overflow-hidden transition transform hover:-translate-y-1">
+                    <div class="absolute top-3 right-3 bg-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded-full font-semibold select-badge hidden">Seleccionado</div>
+                    <div class="h-40 rounded-xl bg-blue-600 text-white p-4 flex flex-col justify-between mb-4 shadow-inner">
+                        <div class="flex justify-between items-center">
+                            <div class="w-20 h-2.5 bg-white rounded"></div>
+                            <div class="w-6 h-6 rounded-full bg-blue-400"></div>
+                        </div>
+                        <div class="space-y-1 bg-blue-700/50 p-2 rounded">
+                            <div class="w-full h-1.5 bg-blue-200 rounded"></div>
+                            <div class="w-5/6 h-1.5 bg-blue-200 rounded"></div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Moderno ATS (Recomendado)</h3>
+                    <p class="text-xs text-slate-500 mt-1">Estructura optimizada específicamente para superar los filtros de Computrabajo y Bumeran.</p>
+                </div>
+
+                <!-- Template 3: Creativo / Ventas -->
+                <div onclick="selectTemplate('creativo')" id="tpl-creativo" class="template-card cursor-pointer bg-white rounded-2xl border-2 border-slate-200 p-5 shadow-sm hover:border-slate-300 relative overflow-hidden transition transform hover:-translate-y-1">
+                    <div class="absolute top-3 right-3 bg-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded-full font-semibold select-badge hidden">Seleccionado</div>
+                    <div class="h-40 rounded-xl bg-emerald-600 text-white p-4 flex flex-col justify-between mb-4 shadow-inner">
+                        <div class="flex space-x-3 items-center">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-400"></div>
+                            <div class="w-28 h-2.5 bg-white rounded"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="h-6 bg-emerald-700/50 rounded p-1"><div class="w-10 h-1 bg-emerald-200 rounded"></div></div>
+                            <div class="h-6 bg-emerald-700/50 rounded p-1"><div class="w-10 h-1 bg-emerald-200 rounded"></div></div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Comercial y Ventas</h3>
+                    <p class="text-xs text-slate-500 mt-1">Enfocado en destacar logros comerciales, atención al cliente y dinamismo.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-end pt-6">
+                <button onclick="goToStage(2)" class="px-8 py-3 bg-yapePurple hover:bg-purple-800 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2">
+                    <span>Continuar con mis datos</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- STAGE 2: USER DATA FORM -->
+        <div id="stage-2" class="hidden space-y-8 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+            <div class="border-b border-slate-100 pb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-yapePurple bg-purple-100 px-3 py-1 rounded-full">Paso 2 de 4</span>
+                <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Ingresa tu Información Profesional</h2>
+                <p class="text-slate-600 text-sm mt-1">Nuestra IA se encargará de redactar y pulir cada sección con lenguaje corporativo.</p>
+            </div>
+
+            <form id="cv-form" onsubmit="event.preventDefault(); goToStage(3);" class="space-y-6">
+                <!-- Datos Personales -->
+                <div>
+                    <h3 class="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-user text-yapePurple"></i> Datos de Contacto
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nombre Completo *</label>
+                            <input type="text" id="inp-nombre" required placeholder="Ej. Juan Carlos Pérez Quispe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puesto al que postulas *</label>
+                            <input type="text" id="inp-puesto" required placeholder="Ej. Asistente de Ventas / Analista de Logística" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Correo Electrónico *</label>
+                            <input type="email" id="inp-email" required placeholder="juan.perez@gmail.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Teléfono / Celular *</label>
+                            <input type="text" id="inp-telefono" required placeholder="987 654 321" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia Laboral -->
+                <div>
+                    <h3 class="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-yapePurple"></i> Última Experiencia Laboral (Opcional)
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Empresa</label>
+                            <input type="text" id="inp-empresa" placeholder="Ej. Importaciones del Sur S.A.C." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Cargo / Puesto</label>
+                            <input type="text" id="inp-cargo" placeholder="Ej. Vendedor Senior / Encargado de Caja" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Breve descripción de tus funciones (La IA las mejorará)</label>
+                        <textarea id="inp-funciones" rows="3" placeholder="Ej. Atendía clientes, cobraba en caja, cuadraba la caja chica y ordenaba los productos." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Educación y Habilidades -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Educación / Estudios *</label>
+                        <input type="text" id="inp-educacion" required placeholder="Ej. Computación e Informática (Instituto X)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Habilidades Principales</label>
+                        <input type="text" id="inp-habilidades" placeholder="Ej. Excel Avanzado, Trabajo en equipo, Atención al cliente" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <button type="button" onclick="goToStage(1)" class="px-6 py-2.5 border border-slate-300 text-slate-700 font-semibold rounded-xl text-sm hover:bg-slate-50 transition">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver
+                    </button>
+                    <button type="submit" class="px-8 py-3 bg-yapePurple hover:bg-purple-800 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2">
+                        <span>Generar con IA (S/ 4.50)</span> <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- STAGE 3: AI PROCESSING & PAYMENT -->
+        <div id="stage-3" class="hidden space-y-8">
+            <!-- AI Simulation Box -->
+            <div id="ai-loading-box" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm text-center max-w-xl mx-auto space-y-6">
+                <div class="w-16 h-16 rounded-2xl yape-gradient text-white flex items-center justify-center text-2xl mx-auto shadow-lg animate-bounce">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-slate-900">La Inteligencia Artificial está procesando tu CV...</h3>
+                    <p id="ai-status-text" class="text-sm text-slate-600 mt-2">Analizando palabras clave para Computrabajo y Bumeran...</p>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                    <div id="ai-progress-bar" class="bg-yapePurple h-2.5 rounded-full w-1/3 transition-all duration-700"></div>
+                </div>
+            </div>
+
+            <!-- Payment Container (Hidden initially until AI finishes) -->
+            <div id="payment-box" class="hidden bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-md max-w-2xl mx-auto space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">¡CV Generado con Éxito!</span>
+                        <h2 class="text-xl font-extrabold text-slate-900 mt-2">Completa tu pago único de S/ 4.50</h2>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-500 block">Total a pagar</span>
+                        <span class="text-2xl font-black text-yapePurple">S/ 4.50</span>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Tabs -->
+                <div class="grid grid-cols-3 gap-2 p-1 bg-slate-100 rounded-xl">
+                    <button onclick="switchPaymentTab('yape')" id="tab-yape" class="py-2.5 text-xs font-bold rounded-lg yape-gradient text-white shadow-sm transition">Yape / Plin</button>
+                    <button onclick="switchPaymentTab('tarjeta')" id="tab-tarjeta" class="py-2.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition">Tarjeta Débito/Crédito</button>
+                    <button onclick="switchPaymentTab('efectivo')" id="tab-efectivo" class="py-2.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition">Código de Pago</button>
+                </div>
+
+                <!-- Yape / Plin Content -->
+                <div id="pay-content-yape" class="space-y-4 text-center py-4">
+                    <p class="text-xs text-slate-600">Escanea el código QR con tu aplicación de <strong>Yape</strong> o <strong>Plin</strong>, o realiza una transferencia al número indicado:</p>
+                    <div class="inline-block p-4 bg-purple-50 border border-purple-200 rounded-2xl shadow-inner">
+                        <div class="w-44 h-44 bg-white p-2 rounded-xl border border-purple-200 mx-auto flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900/5 text-slate-800">
+                                <i class="fa-solid fa-qrcode text-6xl text-yapePurple mb-1"></i>
+                                <span class="text-[10px] font-bold text-yapePurple">YAPE / PLIN OFICIAL</span>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-xs text-slate-500 block">Número celular:</span>
+                            <span class="text-lg font-black text-slate-800 tracking-wider">987 654 321</span>
+                            <span class="text-xs text-slate-500 block mt-1">Titular: CVPro Perú S.A.C.</span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Ingresa tu número de operación o yapeo:</label>
+                        <input type="text" id="inp-nro-operacion" placeholder="Ej. 12345678" class="w-full max-w-sm mx-auto px-4 py-2 rounded-xl border border-slate-300 text-sm text-center font-mono focus:ring-2 focus:ring-yapePurple focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Tarjeta Content -->
+                <div id="pay-content-tarjeta" class="hidden space-y-4 py-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Número de Tarjeta</label>
+                        <input type="text" placeholder="4532 •••• •••• 8921" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none font-mono">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Fecha de Expiración</label>
+                            <input type="text" placeholder="MM/AA" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none font-mono">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">CVV</label>
+                            <input type="password" placeholder="123" maxlength="4" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-yapePurple focus:outline-none font-mono">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Efectivo Content -->
+                <div id="pay-content-efectivo" class="hidden space-y-4 text-center py-6">
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-2xl text-amber-900 text-xs">
+                        <i class="fa-solid fa-circle-info text-amber-600 mr-1 text-sm"></i> Genera tu código de pago y abónalo en cualquier agente BCP, Interbank, BBVA o Bodega cercana.
+                    </div>
+                    <div class="text-2xl font-black font-mono text-slate-800 tracking-widest bg-slate-100 py-3 rounded-xl">
+                        CVPRO-98421
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <button type="button" onclick="goToStage(2)" class="px-6 py-2.5 border border-slate-300 text-slate-700 font-semibold rounded-xl text-sm hover:bg-slate-50 transition">
+                        Atrás
+                    </button>
+                    <button onclick="confirmPayment()" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition flex items-center gap-2">
+                        <span>Confirmar Pago y Descargar</span> <i class="fa-solid fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 4: DOWNLOAD & PREVIEW -->
+        <div id="stage-4" class="hidden space-y-8 bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-lg max-w-3xl mx-auto text-center">
+            <div class="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto shadow-md">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">¡Pago Confirmado con Éxito!</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">Tu CV Profesional está listo</h2>
+                <p class="text-slate-600 text-sm mt-1">Hemos optimizado tu perfil con IA para destacar en Computrabajo y Bumeran.</p>
+            </div>
+
+            <!-- CV Live Preview Card -->
+            <div id="cv-preview-card" class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-left shadow-inner space-y-4 max-w-xl mx-auto">
+                <div class="flex justify-between items-start border-b border-slate-200 pb-4">
+                    <div>
+                        <h4 id="prev-nombre" class="text-lg font-bold text-slate-900">Juan Carlos Pérez</h4>
+                        <p id="prev-puesto" class="text-xs font-semibold text-yapePurple">Asistente de Ventas y Atención al Cliente</p>
+                    </div>
+                    <div class="text-right text-[11px] text-slate-500">
+                        <div id="prev-email">juan.perez@gmail.com</div>
+                        <div id="prev-telefono">987 654 321</div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase text-slate-700 tracking-wider mb-1">Perfil Profesional (Redactado por IA)</h5>
+                    <p id="prev-resumen" class="text-xs text-slate-600 leading-relaxed">
+                        Profesional proactivo con sólida experiencia en gestión comercial, atención al cliente y optimización de procesos operativos. Orientado a resultados, con alta capacidad para trabajar bajo presión y cumplir metas en entornos competitivos.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase text-slate-700 tracking-wider mb-1">Experiencia Laboral Destacada</h5>
+                    <div class="text-xs text-slate-600 space-y-1">
+                        <div class="font-bold text-slate-800" id="prev-exp-cargo">Vendedor Senior - Importaciones del Sur</div>
+                        <p id="prev-exp-desc">Optimización de atención al cliente, gestión de caja chica, incremento de ventas en 15% mediante estrategias de fidelización.</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase text-slate-700 tracking-wider mb-1">Educación y Habilidades</h5>
+                    <p class="text-xs text-slate-600" id="prev-edu">Computación e Informática | Habilidades: Excel Avanzado, Negociación, Orientación al Cliente.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+                <button onclick="downloadPDF()" class="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                    <i class="fa-solid fa-download"></i> Descargar CV en PDF
+                </button>
+                <button onclick="resetApp()" class="w-full sm:w-auto px-6 py-4 border border-slate-300 text-slate-700 font-semibold rounded-xl text-sm hover:bg-slate-50 transition">
+                    Crear Otro CV
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#" class="hover:text-white transition">Términos y Condiciones</a>
+                <a href="#" class="hover:text-white transition">Políticas de Privacidad</a>
+                <a href="#" class="hover:text-white transition">Soporte por WhatsApp</a>
+            </div>
+            <p class="text-xs text-slate-500">© 2026 CVPro IA Perú. Diseñado para potenciar tu empleabilidad en Computrabajo, Bumeran y LinkedIn.</p>
+        </div>
+    </footer>
+
+    <script>
+        let selectedTemplate = 'ejecutivo';
+
+        function selectTemplate(tpl) {
+            selectedTemplate = tpl;
+            document.querySelectorAll('.template-card').forEach(card => {
+                card.classList.remove('border-yapePurple', 'shadow-md');
+                card.classList.add('border-slate-200', 'shadow-sm');
+                card.querySelector('.select-badge').classList.add('hidden');
+            });
+            const activeCard = document.getElementById('tpl-' + tpl);
+            activeCard.classList.remove('border-slate-200', 'shadow-sm');
+            activeCard.classList.add('border-yapePurple', 'shadow-md');
+            activeCard.querySelector('.select-badge').classList.remove('hidden');
+        }
+
+        function scrollToApp() {
+            document.getElementById('app-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function goToStage(stageNum) {
+            // Hide all stages
+            document.getElementById('stage-1').classList.add('hidden');
+            document.getElementById('stage-2').classList.add('hidden');
+            document.getElementById('stage-3').classList.add('hidden');
+            document.getElementById('stage-4').classList.add('hidden');
+
+            // Show target stage
+            document.getElementById('stage-' + stageNum).classList.remove('hidden');
+
+            // Update progress indicators
+            updateIndicators(stageNum);
+
+            if (stageNum === 3) {
+                runAISimulation();
+            }
+
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+
+        function updateIndicators(stage) {
+            for (let i = 1; i <= 4; i++) {
+                const indicator = document.getElementById('step-indicator-' + i);
+                const circle = indicator.querySelector('div');
+                const label = indicator.querySelector('span');
+
+                if (i < stage) {
+                    circle.className = 'w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-md transition';
+                    circle.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    label.className = 'text-xs font-semibold mt-1 text-emerald-600';
+                } else if (i === stage) {
+                    circle.className = 'w-10 h-10 rounded-full bg-yapePurple text-white flex items-center justify-center font-bold text-sm shadow-md transition';
+                    circle.innerText = i;
+                    label.className = 'text-xs font-semibold mt-1 text-yapePurple';
+                } else {
+                    circle.className = 'w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm shadow-sm transition';
+                    circle.innerText = i;
+                    label.className = 'text-xs font-medium mt-1 text-slate-500';
+                }
+
+                if (i < 4) {
+                    const bar = document.getElementById('progress-bar-' + i);
+                    if (i < stage) {
+                        bar.className = 'h-full bg-emerald-600 w-full transition-all duration-300';
+                    } else {
+                        bar.className = 'h-full bg-slate-200 w-0 transition-all duration-300';
+                    }
+                }
+            }
+        }
+
+        function runAISimulation() {
+            const loadingBox = document.getElementById('ai-loading-box');
+            const paymentBox = document.getElementById('payment-box');
+            const statusText = document.getElementById('ai-status-text');
+            const progressBar = document.getElementById('ai-progress-bar');
+
+            loadingBox.classList.remove('hidden');
+            paymentBox.classList.add('hidden');
+
+            setTimeout(() => {
+                statusText.innerText = "Optimizando formato para reclutadores de Bumeran y Computrabajo...";
+                progressBar.style.width = "70%";
+            }, 1200);
+
+            setTimeout(() => {
+                statusText.innerText = "¡CV redactado y optimizado con éxito!";
+                progressBar.style.width = "100%";
+            }, 2400);
+
+            setTimeout(() => {
+                loadingBox.classList.add('hidden');
+                paymentBox.classList.remove('hidden');
+            }, 3000);
+        }
+
+        function switchPaymentTab(method) {
+            document.getElementById('pay-content-yape').classList.add('hidden');
+            document.getElementById('pay-content-tarjeta').classList.add('hidden');
+            document.getElementById('pay-content-efectivo').classList.add('hidden');
+
+            document.getElementById('tab-yape').className = 'py-2.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition';
+            document.getElementById('tab-tarjeta').className = 'py-2.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition';
+            document.getElementById('tab-efectivo').className = 'py-2.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition';
+
+            document.getElementById('pay-content-' + method).classList.remove('hidden');
+            document.getElementById('tab-' + method).className = 'py-2.5 text-xs font-bold rounded-lg yape-gradient text-white shadow-sm transition';
+        }
+
+        function confirmPayment() {
+            // Populate preview data from form inputs
+            const nombre = document.getElementById('inp-nombre').value || "Juan Carlos Pérez";
+            const puesto = document.getElementById('inp-puesto').value || "Asistente Comercial";
+            const email = document.getElementById('inp-email').value || "juan.perez@gmail.com";
+            const telefono = document.getElementById('inp-telefono').value || "987 654 321";
+            const empresa = document.getElementById('inp-empresa').value || "Empresa General S.A.C.";
+            const cargo = document.getElementById('inp-cargo').value || "Encargado de Operaciones";
+            const funciones = document.getElementById('inp-funciones').value || "Gestión de procesos, atención al cliente y optimización de reportes diarios.";
+            const educacion = document.getElementById('inp-educacion').value || "Estudios Superiores / Técnicos";
+            const habilidades = document.getElementById('inp-habilidades').value || "Trabajo en equipo, Excel intermedio, Resolución de problemas";
+
+            document.getElementById('prev-nombre').innerText = nombre;
+            document.getElementById('prev-puesto').innerText = puesto;
+            document.getElementById('prev-email').innerText = email;
+            document.getElementById('prev-telefono').innerText = telefono;
+            document.getElementById('prev-resumen').innerText = `Profesional altamente motivado como ${puesto}, con enfoque en resultados y destacadas competencias en eficiencia operativa y comunicación efectiva para el mercado actual.`;
+            document.getElementById('prev-exp-cargo').innerText = `${cargo} - ${empresa}`;
+            document.getElementById('prev-exp-desc').innerText = funciones;
+            document.getElementById('prev-edu').innerText = `${educacion} | Habilidades: ${habilidades}`;
+
+            goToStage(4);
+        }
+
+        function downloadPDF() {
+            window.print();
+        }
+
+        function resetApp() {
+            document.getElementById('cv-form').reset();
+            goToStage(1);
+        }
+    </script>
+
+</body>
+</html>
